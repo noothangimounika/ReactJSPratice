@@ -11,12 +11,24 @@
 // export default FirstComp
 
 
+// import React from 'react'
+
+// const FirstComp = (props) => {
+   
+//   return (
+//     <div>{props.name}</div>
+//   )
+// }
+
+// export default FirstComp
+
 import React from 'react'
 
-const FirstComp = (props) => {
-   
+const FirstComp = () => {
   return (
-    <div>{props.name}</div>
+    <div>
+      <h1>Iam FirstComponenet</h1>
+      </div>
   )
 }
 

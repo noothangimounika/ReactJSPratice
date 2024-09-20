@@ -35,9 +35,11 @@ import ThirdComp from './propConatainer/ThirdComp';
 import FourComp from './propConatainer/FourComp';
 import StateMgm from './StateMgm.jsx'
  
+import { useState } from 'react';
 
-
-
+import ClickEvents from './ClickEvents.jsx';
+import Resize from './Resize.jsx';
+ 
 
 // const user={
 //   name:"Mounika",
@@ -46,30 +48,53 @@ import StateMgm from './StateMgm.jsx'
 
 // }
 
-const myCar={
-  model:"Maruti",
-  year:2024,
-  dealer:"Nixon",
-  color:"Navy"
-}
+// const myCar={
+//   model:"Maruti",
+//   year:2024,
+//   dealer:"Nixon",
+//   color:"Navy"
+// }
 
 function App() {
+
+  const [SampleCondition,setSampleCondition]=useState(true)
+  // const [SampleCondition,setSampleCondition]=useState(false)
+
+  
+
   return (
-    // <div className='Conatiner'>
-    //   <h1>Hello welcome React JS</h1>
-    //   <img src="Images/bg-img.jpg"  alt=''/>
-    //   </div>
-    <div>
-      {/* <FirstComp  name={user.name}/>
+    <div className='Conatiner'>
+
+      {/* <h1>Hello welcome React JS</h1>
+      <img src="Images/bg-img.jpg"  alt=''/>
+      <FirstComp  name={user.name}/>
       <SecondComp name="Deva"/>
       <ThirdComp name="Chitti"/>
-      <FourComp name="Hello" /> */}
+      <FourComp name="Hello" />
+      <SecondComp myCar={myCar} />
+       <StateMgm /> */}
+       
+      {/* <h1>Hello welcome React JS <br />
+        {SampleCondition? "This is True Condition Statement":"This is flase Condition Statement"}
+        {SampleCondition? <FirstComp />:"This is flase Condition Statement"}
+      </h1> */}
 
+      <h1>Hello welcome React JS <br />
+        <ClickEvents />
 
-        <SecondComp myCar={myCar} />
-       <StateMgm />
-    </div>
+      </h1>
+        {/* <Resize /> */}
+
+      </div>
+    
   )
 }
 
 export default App
+
+
+
+
+
+
+

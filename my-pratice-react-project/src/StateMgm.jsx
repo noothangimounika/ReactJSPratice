@@ -42,17 +42,24 @@
 
 // export default StateMGM
 
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 
 const StateMgm=()=>{
-    const[city,setCity]=useState("Hyderabad");
+    const[city,setCity]=useState("Hyderabad"); 
 
-    if(city ==="Hyderabad"){
-        setCity("Bangalore")
-    }
-    // else{
-    //     setCity("Delhi")
-    // }
+
+    useEffect(()=>{
+        if(city ==="Hyderabad"){
+            setCity("Bangalore")
+        }
+        else{
+            setCity("Delhi")
+        }
+    },[])
+
+
+
+    
     return(
         <div>
           <h1>Iam Living in {city}</h1>    
